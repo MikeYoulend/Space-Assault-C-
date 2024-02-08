@@ -8,7 +8,8 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 10f;
-
+    [SerializeField] float xRange = 10f;
+    [SerializeField] float yRange = 7f;
     void OnEnable() 
     {
         movement.Enable();
@@ -24,11 +25,16 @@ public class PlayerControl : MonoBehaviour
         float YThrow = movement.ReadValue<Vector2>().y;
 
         float xOffset = xThrow * Time.deltaTime * controlSpeed;
-        float newXPos = transform.localPosition.x + xOffset;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+        
+        float yOffset = YThrow * Time.deltaTime * controlSpeed;
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3 
-        (newXPos, 
-        transform.localPosition.y, 
+        (clampedXPos, 
+        clampedYPos, 
         transform.localPosition.z);
         
        //float horizontalThrow = Input.GetAxis("Horizontal");
