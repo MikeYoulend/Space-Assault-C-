@@ -7,12 +7,7 @@ public class PlayerControl : MonoBehaviour
 {
 
     [SerializeField] InputAction movement;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    
-    }
+    [SerializeField] float controlSpeed = 10f;
 
     void OnEnable() 
     {
@@ -28,7 +23,7 @@ public class PlayerControl : MonoBehaviour
         float xThrow = movement.ReadValue<Vector2>().x;
         float YThrow = movement.ReadValue<Vector2>().y;
 
-        float xOffset = .1f;
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
         float newXPos = transform.localPosition.x + xOffset;
 
         transform.localPosition = new Vector3 
