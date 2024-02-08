@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     void OnEnable() 
@@ -25,12 +25,19 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalThrow = movement.ReadValue<Vector2>().x;
-        float VerticalThrow = movement.ReadValue<Vector2>().y;
+        float xThrow = movement.ReadValue<Vector2>().x;
+        float YThrow = movement.ReadValue<Vector2>().y;
+
+        float xOffset = .1f;
+        float newXPos = transform.localPosition.x + xOffset;
+
+        transform.localPosition = new Vector3 
+        (newXPos, 
+        transform.localPosition.y, 
+        transform.localPosition.z);
         
-      // float horizontalThrow = Input.GetAxis("Horizontal");
-       Debug.Log(horizontalThrow);
+       //float horizontalThrow = Input.GetAxis("Horizontal");
+       
        //float VerticalThrow = Input.GetAxis("Vertical");
-        Debug.Log(VerticalThrow);
     }
 }
