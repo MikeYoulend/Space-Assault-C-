@@ -10,6 +10,12 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
+
+    [SerializeField] float positionPitchFactor = -2f;
+
+    float xThrow, yThrow;
+   
+
     void OnEnable() 
     {
         movement.Enable();
@@ -30,7 +36,7 @@ public class PlayerControl : MonoBehaviour
 
     void ProcessRotation()
     {
-        float pitch = 0f;
+        float pitch = transform.localPosition.y * positionPitchFactor + yThrow;
         float yaw = 0f;
         float roll = 0f;
 
@@ -39,14 +45,14 @@ public class PlayerControl : MonoBehaviour
 
     void ProcessTranslation()
     {
-        float xThrow = movement.ReadValue<Vector2>().x;
-        float YThrow = movement.ReadValue<Vector2>().y;
+        xThrow = movement.ReadValue<Vector2>().x;
+        yThrow = movement.ReadValue<Vector2>().y;
 
         float xOffset = xThrow * Time.deltaTime * controlSpeed;
         float rawXPos = transform.localPosition.x + xOffset;
         float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
 
-        float yOffset = YThrow * Time.deltaTime * controlSpeed;
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
         float rawYPos = transform.localPosition.y + yOffset;
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
