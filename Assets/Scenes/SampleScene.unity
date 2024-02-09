@@ -693,8 +693,20 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8930857469993502038, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: controlRollFactor
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930857469993502038, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: positionYawFactor
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930857469993502038, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: controlPitchFactor
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930857469993502038, guid: da6c613738fdea745b422942503508bd, type: 3}
       propertyPath: positionPitchFactor
-      value: -4
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
