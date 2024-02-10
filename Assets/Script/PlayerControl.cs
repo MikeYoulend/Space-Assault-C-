@@ -68,6 +68,7 @@ public class PlayerControl : MonoBehaviour
 
 void ProcessTranslation()
 {
+    //New Input
     // Legge l'input di movimento del giocatore lungo gli assi X e Y.
     xThrow = movement.ReadValue<Vector2>().x;
     yThrow = movement.ReadValue<Vector2>().y;
@@ -78,7 +79,7 @@ void ProcessTranslation()
     // Calcola la nuova posizione X grezza sommando lo spostamento laterale al valore corrente della posizione X dell'oggetto.
     float rawXPos = transform.localPosition.x + xOffset;
     
-    // Limita la nuova posizione X all'interno dell'intervallo consentito (definito da xRange).
+    // Limita la nuova posizione nel Range X
     float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
 
     // Calcola lo spostamento verticale lungo l'asse Y basato sull'input di movimento e sulla velocità di controllo.
@@ -87,7 +88,7 @@ void ProcessTranslation()
     // Calcola la nuova posizione Y grezza sommando lo spostamento verticale al valore corrente della posizione Y dell'oggetto.
     float rawYPos = transform.localPosition.y + yOffset;
     
-    // Limita la nuova posizione Y all'interno dell'intervallo consentito (definito da yRange).
+    // Limita la nuova posizione nel Range Y.
     float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
     // Aggiorna la posizione locale dell'oggetto con la nuova posizione X e Y calcolata, mantenendo la stessa posizione lungo l'asse Z.
@@ -101,16 +102,34 @@ void ProcessTranslation()
     //if (Input.GetButton("Fire1"))
      //New Input
     if(fire.ReadValue<float>() > 0.5)
-    {
-     UnityEngine.Debug.Log("I'm shooting");
+        {
+            ActiveLasers();
+        }
+        else
+        {
+            DeactiveLasers();
+        }
+
+        //if pushing fire button    
+        //the print "shooting"
+        //else don't print shooting
     }
-    else
+
+     void ActiveLasers()
     {
-        UnityEngine.Debug.Log("Im not shooting");
+        foreach (GameObject laser in lasers) //laser del gruppo di lasers, birillo del gruppo di birilli
+        { 
+            laser.SetActive(true);
+        } 
     }
-    
-    //if pushing fire button    
-    //the print "shooting"
-    //else don't print shooting
-}
+    void DeactiveLasers()
+    {
+        
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(false);
+        }
+    }
+
+   
 }
