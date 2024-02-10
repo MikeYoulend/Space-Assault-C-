@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
+    [SerializeField] GameObject[] lasers; //in C# si dichiara così che GameObject sarà un Array di oggetti
 
     [SerializeField] float positionPitchFactor = 0.5f;
     [SerializeField] float controlPitchFactor = -7f;
