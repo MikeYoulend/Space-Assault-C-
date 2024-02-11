@@ -104,34 +104,20 @@ void ProcessTranslation()
      //New Input
     if(fire.ReadValue<float>() > 0.5)
         {
-            ActiveLasers();
+            SetLasersActive(true); //leggere dopo setlaseractive... qui è true
         }
         else
         {
-            DeactiveLasers();
+             SetLasersActive(false); //leggere dopo setlaseractive... qui è false
         }
-
-        //if pushing fire button    
-        //the print "shooting"
-        //else don't print shooting
     }
 
-     void ActiveLasers()
+     void SetLasersActive(bool isActive) //essendo questa un bool quando la chiami potra essere solo true or false
     {
         foreach (GameObject laser in lasers) //laser del gruppo di lasers, birillo del gruppo di birilli
         { 
-            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
-            emissionModule.enabled = true;
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission; //gli diamo una variabile per comodità e prendiamo emission che fa parte di ParticleSystem
+            emissionModule.enabled = isActive; //Emission.enabled vuol dire è attivo quindi =  isActive, quando la passiamo decidiamo se è true o false
         } 
     }
-    void DeactiveLasers()
-    {
-        
-        foreach (GameObject laser in lasers)
-        {
-            laser.SetActive(false);
-        }
-    }
-
-   
 }
