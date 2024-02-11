@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] InputAction movement;
     [SerializeField] InputAction fire;
+    
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
@@ -119,7 +120,8 @@ void ProcessTranslation()
     {
         foreach (GameObject laser in lasers) //laser del gruppo di lasers, birillo del gruppo di birilli
         { 
-            laser.SetActive(true);
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = true;
         } 
     }
     void DeactiveLasers()
