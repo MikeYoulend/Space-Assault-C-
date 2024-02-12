@@ -10,7 +10,9 @@ public class CollisionHandler : MonoBehaviour
 
       //void OnTriggerEnter(Collider other) 
       //{Debug.Log($"{this.name} **Triggered By** {other.gameObject.name}"); //è la stessa cosa di sopra}
-      void OnTriggerEnter(Collider other)
+    [SerializeField] float loadDelay = 1f;
+
+    void OnTriggerEnter(Collider other)
     {
         StartCrashSequence();
     }
@@ -18,7 +20,7 @@ public class CollisionHandler : MonoBehaviour
     void StartCrashSequence()
     {
         GetComponent<PlayerControl>().enabled = false;
-        Invoke("ReloadLevel", 1f);
+        Invoke("ReloadLevel", loadDelay);
     }
 
     void ReloadLevel()
