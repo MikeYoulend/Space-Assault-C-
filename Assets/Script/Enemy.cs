@@ -21,5 +21,6 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject); //distruggiamo il gameObject a cui diamo questo script
             Debug.Log($"{this.name}im hit by {other.gameObject.name}");
     }
+    
 
 }
