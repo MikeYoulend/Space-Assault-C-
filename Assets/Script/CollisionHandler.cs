@@ -10,6 +10,6 @@ public class CollisionHandler : MonoBehaviour
       }
       void OnTriggerEnter(Collider other) 
       {
-       Debug.Log($"{this.name} **Triggered By** {other.gameObject.name}"); 
+       Debug.Log($"{this.name} **Triggered By** {other.gameObject.name}"); //è la stessa cosa di sopra
       }
 }
