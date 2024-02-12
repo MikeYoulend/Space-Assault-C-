@@ -532,6 +532,22 @@ PrefabInstance:
       propertyPath: lasers.Array.data[1]
       value: 
       objectReference: {fileID: 303650293}
+    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 568a5c30-08ec-4544-8417-84b0a6cd2bdb
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 7908803872549316235, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
       propertyPath: m_Name
       value: Player Rig

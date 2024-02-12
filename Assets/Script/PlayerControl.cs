@@ -7,17 +7,24 @@ using UnityEngine.InputSystem;
 public class PlayerControl : MonoBehaviour
 {
 
+    [Header("General Setup Settings")]
     [SerializeField] InputAction movement;
     [SerializeField] InputAction fire;
     
-    [SerializeField] float controlSpeed = 10f;
-    [SerializeField] float xRange = 10f;
-    [SerializeField] float yRange = 7f;
+    [Tooltip("How fast ship moves up and down")]  [SerializeField] float controlSpeed = 10f;
+    [Tooltip("How far player moves horizontally")] [SerializeField] float xRange = 10f;
+    [Tooltip("How far player moves vertically")] [SerializeField] float yRange = 7f;
+
+    [Header("Laser gun array")]
+    [Tooltip("Add all player lasers here")]
     [SerializeField] GameObject[] lasers; //in C# si dichiara così che GameObject sarà un Array di oggetti
 
+    [Header("Screen position based tuning")]
     [SerializeField] float positionPitchFactor = 0.5f;
-    [SerializeField] float controlPitchFactor = -7f;
     [SerializeField] float positionYawFactor = -1.5f;
+
+    [Header("Player input based tuning")]
+    [SerializeField] float controlPitchFactor = -7f;
     [SerializeField] float controlRollFactor = -15f;
     float xThrow, yThrow;
    
