@@ -15,4 +15,11 @@ public class Enemy : MonoBehaviour
     {
         
     }
+
+    void OnParticleCollision(GameObject other) 
+    {
+            Destroy(gameObject); //distruggiamo il gameObject a cui diamo questo script
+            Debug.Log($"{this.name}im hit by {other.gameObject.name}");
+    }
+
 }
