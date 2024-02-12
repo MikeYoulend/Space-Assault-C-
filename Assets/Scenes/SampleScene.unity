@@ -123,16 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &303650293 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4995981916417288582, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-  m_PrefabInstance: {fileID: 602340601324017586}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &604571534 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4025184151419499142, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-  m_PrefabInstance: {fileID: 602340601324017586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &697365130
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,42 +607,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4025184151419499142, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: m_Name
-      value: Laser left
-      objectReference: {fileID: 0}
-    - target: {fileID: 4995981916417288582, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: m_Name
-      value: Laser right
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: lasers.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: lasers.Array.data[0]
-      value: 
-      objectReference: {fileID: 604571534}
-    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: lasers.Array.data[1]
-      value: 
-      objectReference: {fileID: 303650293}
-    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: fire.m_SingletonActionBindings.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Id
-      value: 568a5c30-08ec-4544-8417-84b0a6cd2bdb
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Keyboard>/space
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137903097187254298, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
-      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Action
-      value: Fire
-      objectReference: {fileID: 0}
     - target: {fileID: 7908803872549316235, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
       propertyPath: m_Name
       value: Player Rig

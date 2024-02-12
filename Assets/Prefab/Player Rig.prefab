@@ -157,7 +157,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 182239283930056859, guid: da6c613738fdea745b422942503508bd, type: 3}
       propertyPath: m_Name
-      value: StarSparrow8
+      value: PlayerShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 425811350065404626, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: m_Name
+      value: Laser right
       objectReference: {fileID: 0}
     - target: {fileID: 706116285988442657, guid: da6c613738fdea745b422942503508bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -200,26 +204,64 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 4025184151419499142}
+    - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 4995981916417288582}
+    - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
       propertyPath: fire.m_SingletonActionBindings.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
       propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Id
       value: 7d041234-d718-4116-9e35-8087f7e8d6a6
       objectReference: {fileID: 0}
     - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 568a5c30-08ec-4544-8417-84b0a6cd2bdb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
       propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Path
       value: <Gamepad>/rightTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
       propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Action
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572522079285441358, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602387210551787986, guid: da6c613738fdea745b422942503508bd, type: 3}
+      propertyPath: m_Name
+      value: Laser left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da6c613738fdea745b422942503508bd, type: 3}
+--- !u!1 &4025184151419499142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8602387210551787986, guid: da6c613738fdea745b422942503508bd, type: 3}
+  m_PrefabInstance: {fileID: 4665028000376009556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4995981916417288582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 425811350065404626, guid: da6c613738fdea745b422942503508bd, type: 3}
+  m_PrefabInstance: {fileID: 4665028000376009556}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5292049771867677045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 706116285988442657, guid: da6c613738fdea745b422942503508bd, type: 3}
