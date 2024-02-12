@@ -740,9 +740,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5874505102295058796, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: loadDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050744897715826407, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050744897715826407, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7908803872549316235, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
       propertyPath: m_Name
       value: Player Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759534613834199167, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8793751020184382978, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
       propertyPath: m_LocalPosition.x
