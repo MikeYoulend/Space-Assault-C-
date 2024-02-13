@@ -4,10 +4,28 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-   [SerializeField] GameObject deathVFX;
-   [SerializeField] Transform parent; //transform perchè è l'unica cosa presente nell'Empty
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] Transform parent; //transform perchè è l'unica cosa presente nell'Empty
+    [SerializeField] int scorePerHit = 15;
+    ScoreBoard scoreBoard;
 
-    void OnParticleCollision(GameObject other) 
+    void Start() 
+    {
+        //non usare FindAny.. in Update, prende troppe risorse
+        //ad ogni enemy che compare gli passa lo script ScoreBoard
+        scoreBoard = FindObjectOfType<ScoreBoard>();
+    }
+
+    
+
+    
+    void OnParticleCollision(GameObject other)
+    {
+        ProcessHit();
+        KillEnemy();
+    }
+
+    void KillEnemy()
     {
         ///Instatiate clona un oggetto 
         ///transform.position perchè è la posizione di Enemy
@@ -16,6 +34,11 @@ public class Enemy : MonoBehaviour
         vfx.transform.parent = parent; //daremo come parent Il parent sopra agli Enemy
         Destroy(gameObject); //distruggiamo il gameObject a cui diamo questo script  
     }
-    
+
+    void ProcessHit()
+    {
+         //Callback di una void public (ScoreBoard)
+        scoreBoard.IncreaseScore(scorePerHit);
+    }
 
 }
