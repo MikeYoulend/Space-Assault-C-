@@ -744,6 +744,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2351892272893130692, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5874505102295058796, guid: ae7b5c631e31ee14fb1931143540cd1a, type: 3}
       propertyPath: loadDelay
       value: 1

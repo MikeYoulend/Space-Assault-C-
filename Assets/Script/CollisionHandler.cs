@@ -14,20 +14,19 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] ParticleSystem deathParticles;
 
 
-    bool isTransitioning = false;
+   
     void OnTriggerEnter(Collider other)
     {
-        if (isTransitioning)
-        {
-          return;
-        }
+        
         StartCrashSequence();
     }
 
     void StartCrashSequence()
     {   
-        isTransitioning = true;
-        deathParticles.Play(deathParticles);
+        
+        deathParticles.Play();
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         GetComponent<PlayerControl>().enabled = false;
         Invoke("ReloadLevel", loadDelay);
     }
