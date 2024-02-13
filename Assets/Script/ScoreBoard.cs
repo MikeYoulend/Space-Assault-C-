@@ -8,7 +8,7 @@ public class ScoreBoard : MonoBehaviour
 
    public void IncreaseScore(int amountToIncrease)
    {
-            
-    score =+ amountToIncrease; //score = score + amountToIncrease;
+    score += amountToIncrease; //score = score + amountToIncrease;
+    Debug.Log(score);
    }
 }
