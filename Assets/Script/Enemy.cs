@@ -4,22 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   [SerializeField] GameObject deathVFX;
 
     void OnParticleCollision(GameObject other) 
     {
-            Destroy(gameObject); //distruggiamo il gameObject a cui diamo questo script
-          
+        ///Instatiate clona un oggetto 
+        ///transform.position perchè è la posizione di Enemy
+        ///Quaternion.identity fa si che la copia rimanga cosi senza rotazioni o movivementi
+        Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(gameObject); //distruggiamo il gameObject a cui diamo questo script  
     }
     
 
