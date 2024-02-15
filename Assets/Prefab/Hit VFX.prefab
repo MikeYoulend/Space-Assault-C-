@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8239675807435563754}
   - component: {fileID: 4753311439271181704}
   - component: {fileID: 3012246898570325528}
+  - component: {fileID: -4251987667458572058}
   m_Layer: 0
   m_Name: Hit VFX
   m_TagString: Untagged
@@ -288,7 +289,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 1.01
       minScalar: 0.3
       maxCurve:
         serializedVersion: 2
@@ -752,7 +753,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1.41
+      value: 3.97
       mode: 0
       spread: 0
       speed:
@@ -4833,6 +4834,19 @@ ParticleSystemRenderer:
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!114 &3012246898570325528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251106487701374787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6cd700c59bbfd42a5f36ace1b9156a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeTillDestroy: 3
+--- !u!114 &-4251987667458572058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

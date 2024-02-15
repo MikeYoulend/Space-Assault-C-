@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -16,6 +17,12 @@ public class Enemy : MonoBehaviour
         //non usare FindAny.. in Update, prende troppe risorse
         //ad ogni enemy che compare gli passa lo script ScoreBoard
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        //Definiamo rb
+        //prendiamo questo gameObject e aggiungiamoci RigidBody
+        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+        //Disattiviamo la gravità
+        rb.useGravity = false;
+
     }
 
     
