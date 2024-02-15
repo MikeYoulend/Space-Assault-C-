@@ -1449,7 +1449,7 @@ MonoBehaviour:
   deathVFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
   hitVFX: {fileID: 251106487701374787, guid: d55021e6642711349b4e8e161a7b608a, type: 3}
   parent: {fileID: 0}
-  scorePerHit: 80
+  scorePerHit: 50
   hitPoints: 10
 --- !u!1 &5512865841011589107
 GameObject:

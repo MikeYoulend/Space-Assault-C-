@@ -12,22 +12,25 @@ public class Enemy : MonoBehaviour
     [SerializeField] int hitPoints = 4;
     ScoreBoard scoreBoard;
 
-    void Start() 
+    void Start()
     {
         //non usare FindAny.. in Update, prende troppe risorse
         //ad ogni enemy che compare gli passa lo script ScoreBoard
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        AddRigidbody();
+    }
+
+    private void AddRigidbody()
+    {
         //Definiamo rb
         //prendiamo questo gameObject e aggiungiamoci RigidBody
         Rigidbody rb = gameObject.AddComponent<Rigidbody>();
         //Disattiviamo la gravità
         rb.useGravity = false;
-
     }
 
-    
 
-    
+
     void OnParticleCollision(GameObject other)
     {
         ProcessHit();
