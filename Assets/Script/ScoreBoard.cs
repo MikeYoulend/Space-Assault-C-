@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.SocialPlatforms.Impl; //stiamo usando TextMeshPro
+using TMPro; //stiamo usando TextMeshPro
+using UnityEngine.SocialPlatforms.Impl; 
 
 public class ScoreBoard : MonoBehaviour
 {

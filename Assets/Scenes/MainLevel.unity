@@ -255,6 +255,7 @@ MonoBehaviour:
   deathVFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
   parent: {fileID: 1651743976}
   scorePerHit: 15
+  hitPoints: 3
 --- !u!136 &746088037
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -378,6 +379,7 @@ MonoBehaviour:
   deathVFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
   parent: {fileID: 1651743976}
   scorePerHit: 15
+  hitPoints: 8
 --- !u!136 &767880200
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -619,6 +621,7 @@ MonoBehaviour:
   deathVFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
   parent: {fileID: 1651743976}
   scorePerHit: 15
+  hitPoints: 4
 --- !u!1 &2058451308
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +918,7 @@ MonoBehaviour:
   deathVFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
   parent: {fileID: 1651743976}
   scorePerHit: 15
+  hitPoints: 2
 --- !u!1 &2089445228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,6 +1205,10 @@ PrefabInstance:
     - target: {fileID: 2006867561449188938, guid: a29036677f96e7949b8b02dec3a96de6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.158
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541896214710717813, guid: a29036677f96e7949b8b02dec3a96de6, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5333231488603264381, guid: a29036677f96e7949b8b02dec3a96de6, type: 3}
       propertyPath: m_Name

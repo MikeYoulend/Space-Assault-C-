@@ -5,8 +5,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject hitVFX;
     [SerializeField] Transform parent; //transform perchè è l'unica cosa presente nell'Empty
     [SerializeField] int scorePerHit = 15;
+    [SerializeField] int hitPoints = 4;
     ScoreBoard scoreBoard;
 
     void Start() 
@@ -22,7 +24,21 @@ public class Enemy : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         ProcessHit();
-        KillEnemy();
+        //Non mettiamo = a 0 perchè potrebbe creare dei problemi
+        if (hitPoints < 1) 
+        {
+            KillEnemy();
+        }
+        
+    }
+
+    void ProcessHit()
+    {   
+        GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
+        vfx.transform.parent = parent; //daremo come parent Il parent sopra agli Enemy
+        hitPoints--; //HitPoints = HitPoints - 1;
+         //Callback di una void public (ScoreBoard)
+        scoreBoard.IncreaseScore(scorePerHit);
     }
 
     void KillEnemy()
@@ -35,10 +51,6 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject); //distruggiamo il gameObject a cui diamo questo script  
     }
 
-    void ProcessHit()
-    {
-         //Callback di una void public (ScoreBoard)
-        scoreBoard.IncreaseScore(scorePerHit);
-    }
+  
 
 }
