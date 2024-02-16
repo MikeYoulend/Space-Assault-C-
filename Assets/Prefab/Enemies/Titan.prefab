@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 6035573195822591677}
   - component: {fileID: 1305921012242640875}
   - component: {fileID: 3512034173744430837}
+  - component: {fileID: 3881169041763710436}
   m_Layer: 0
   m_Name: Titan
   m_TagString: Untagged
@@ -632,11 +633,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b12d5e9b9d159247a27e4453e51b760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
+  deathFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
   hitVFX: {fileID: 251106487701374787, guid: d55021e6642711349b4e8e161a7b608a, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 100
   hitPoints: 60
+--- !u!65 &3881169041763710436
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4305833756076733214}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.796676, y: 2.4607563, z: 10.611299}
+  m_Center: {x: -3.0292259e-28, y: -0.00000035762787, z: -0.000017642975}
 --- !u!1 &4568474137565287375
 GameObject:
   m_ObjectHideFlags: 0

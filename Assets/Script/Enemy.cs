@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject deathFX;
     [SerializeField] GameObject hitVFX;
     [SerializeField] int scorePerHit = 15;
     [SerializeField] int hitPoints = 4;
@@ -59,8 +59,8 @@ public class Enemy : MonoBehaviour
         ///Instatiate clona un oggetto 
         ///transform.position perchè è la posizione di Enemy
         ///Quaternion.identity fa si che la copia rimanga cosi senza rotazioni o movivementi
-        GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
-        vfx.transform.parent = ParentGameObject.transform; //daremo come parent Il parent sopra agli Enemy
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = ParentGameObject.transform; //daremo come parent Il parent sopra agli Enemy
         Destroy(gameObject); //distruggiamo il gameObject a cui diamo questo script  
     }
 

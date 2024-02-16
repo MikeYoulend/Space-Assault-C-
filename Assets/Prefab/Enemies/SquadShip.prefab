@@ -494,6 +494,7 @@ GameObject:
   - component: {fileID: 2132945905488581528}
   - component: {fileID: 6000342440067924766}
   - component: {fileID: 2187632924163145106}
+  - component: {fileID: 8236132679843880632}
   m_Layer: 0
   m_Name: SquadShip
   m_TagString: Untagged
@@ -579,11 +580,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b12d5e9b9d159247a27e4453e51b760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
+  deathFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
   hitVFX: {fileID: 251106487701374787, guid: d55021e6642711349b4e8e161a7b608a, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 30
   hitPoints: 3
+--- !u!65 &8236132679843880632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835806990761780104}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.1643414, y: 3.26794, z: 10.555435}
+  m_Center: {x: 0, y: -0.0000005364418, z: 0.000014066696}
 --- !u!1 &3986198572477844070
 GameObject:
   m_ObjectHideFlags: 0

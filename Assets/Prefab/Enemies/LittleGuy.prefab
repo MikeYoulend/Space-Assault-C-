@@ -1250,6 +1250,7 @@ GameObject:
   - component: {fileID: 2982163709547107802}
   - component: {fileID: 5867989721799716306}
   - component: {fileID: 3011144453264401733}
+  - component: {fileID: -860197969455321104}
   m_Layer: 0
   m_Name: LittleGuy
   m_TagString: Untagged
@@ -1335,11 +1336,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b12d5e9b9d159247a27e4453e51b760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
+  deathFX: {fileID: 251106487701374787, guid: de62c35c88bba994e88f7a205d53f60f, type: 3}
   hitVFX: {fileID: 251106487701374787, guid: d55021e6642711349b4e8e161a7b608a, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 20
   hitPoints: 1
+--- !u!65 &-860197969455321104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728255364533184840}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.651425, y: 1.7536123, z: 12.358537}
+  m_Center: {x: 0, y: -0.0000010728836, z: 0.000006198883}
 --- !u!1 &8762525321462398383
 GameObject:
   m_ObjectHideFlags: 0
